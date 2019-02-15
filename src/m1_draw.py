@@ -80,7 +80,7 @@ def test_draw_a_picture():
 #   The is_prime function is supplied.  Do NOT change is_prime
 #     """
 ###############################################################################
-# TODO: 1  READ the doc-string for the is_prime function defined below.
+# DONE: 1  READ the doc-string for the is_prime function defined below.
 # You do NOT need to understand its implementations,
 # just its specification (per the doc-string).
 # You should  ** CALL **  functions as needed in implementing the
@@ -111,7 +111,7 @@ def is_prime(n):
     return True
 
 # -------------------------------------------------------------------------
-#  TODO: 2. Implement and test the draw_a_picture function.
+#  DONE: 2. Implement and test the draw_a_picture function.
 #           Tests have been written for you (above in main).
 #  We suggest breaking this into multiple commits.
 #     Can you show the correct circle?
@@ -123,11 +123,25 @@ def is_prime(n):
 # HINT:   render(0.5)
 #         renders with a half-second pause after rendering.
 ############################################################################
-# -------------------------------------------------------------------------
+# --------------------------
+
+    circle = rg.Circle(point,100)
+    rectangle = rg.Rectangle(rg.Point(point.x-80,point.y-40),rg.Point(point.x+80,point.y+40))
+    for k in range(n):
+        line = rg.Line(point, rg.Point(point.x + 80, point.y - 40))
+        line.end.move_by(-(k*160)/(n-1), 0)
+        if is_prime(k+1)-----------------------------------------------
 #
 #
 #
-def draw_a_picture(point, n, color, window):
+def draw_a_picture(point, n, color, window)::
+            line.color = 'orange'
+        else:
+            line.color = color
+        line.attach_to(window)
+    circle.attach_to(window)
+    rectangle.attach_to(window)
+    window.render(0.5)
 
     pass
 
