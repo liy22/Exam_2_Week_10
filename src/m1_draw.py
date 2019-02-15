@@ -123,18 +123,18 @@ def is_prime(n):
 # HINT:   render(0.5)
 #         renders with a half-second pause after rendering.
 ############################################################################
-# --------------------------
+# -------------------------------------------------------------------------
+#
+#
+#
+def draw_a_picture(point, n, color, window):
 
     circle = rg.Circle(point,100)
     rectangle = rg.Rectangle(rg.Point(point.x-80,point.y-40),rg.Point(point.x+80,point.y+40))
     for k in range(n):
         line = rg.Line(point, rg.Point(point.x + 80, point.y - 40))
         line.end.move_by(-(k*160)/(n-1), 0)
-        if is_prime(k+1)-----------------------------------------------
-#
-#
-#
-def draw_a_picture(point, n, color, window)::
+        if is_prime(k+1):
             line.color = 'orange'
         else:
             line.color = color
